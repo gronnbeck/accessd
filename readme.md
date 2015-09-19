@@ -27,7 +27,8 @@ POST /v0/groups/:groupId/users/:userId
 ```
 
 ## Known Issues
-
+ * Exposing etcd internal state. Should provide its interface to reduce
+ coupling.
  * Registering user to a group has the possibility of entering a state
  where either a user belongs to a group and the group does not contain a user
  or vica-versa. This can be solved using a write-log for detecting
